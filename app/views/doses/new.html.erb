@@ -1,6 +1,11 @@
-<h1>Add doses 🚀</h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :cocktail input_hidden: false%>
-  <%= f.submit %>
-<% end %>
+<h2> <%= @cocktail.name %>🚀 </h2>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient %>
+    <%= f.input :description %>
+    <%= f.button :submit%>
+  <% end %>
+
+
+<h2> <%= link_to 'Home', cocktails_path %></h2>
+
+

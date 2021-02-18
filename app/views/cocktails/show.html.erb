@@ -1,3 +1,22 @@
-<h2><%= @cocktail.name %> 🚀</h2>
-<br>
-<%= link_to 'Back', cocktails_path %>
+ <div class="container padded">
+  <div class="row justify-content-center" >
+    <div class="col-8">
+      <h2> <%= @cocktail.name %>🚀 </h2>
+      <br>
+      <% @cocktail.doses.each do |dose| %>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+        <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "You sure?" } %>
+        <br>
+      <% end %>
+      <br>
+      <%= link_to "Add dose",  new_cocktail_dose_path(@cocktail), class: "btn btn-success"%>
+      <%= link_to 'Go back to cocktails', cocktails_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- # a comment form in a post show view -->
+<!-- # an ingredient in a cocktail show view -->
