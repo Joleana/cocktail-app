@@ -1,15 +1,30 @@
-<div class="container text-center">
-  <h1>Cocktails 🚀</h1>
-  <br>
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <% @cocktails.each do |cocktail| %>
-        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-        <br>
-      <% end %>
-    </div>
-  </div>
-  <%= link_to 'New', new_cocktail_path(@cocktail) %>
-</div>
+<div class="container padded">
 
+  <!-- Banner div -->
+  <div class="home-banner">
+    <h1>Discover your taste</h1>
+  </div>
+
+  <!-- Grid row -->
+  <div class="row">
+    <!-- Card -->
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <div class="card-description">
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+    <!-- Add button -->
+  <div class="pad10">
+    <%= link_to "Create cocktail", new_cocktail_path(@cocktail), class: "btn btn-primary pad20" %>
+  </div>
+
+
+<!-- Close main div -->
+</div>
 

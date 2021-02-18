@@ -11,3 +11,19 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Defining a variable
+
+body {
+  background: $white; // Using this variable
+}
+
+.padded {
+  margin-top: 20px;
+}
+
+.half-padded {
+  margin-top: 10px;
+}
+
+

@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  flex-grow: 1;
+  height: 175px;
+  background: pink;
+}
+
+.card-description h2 {
+  font-size: 13px;
+  text-decoration: none, !important;
+  }
