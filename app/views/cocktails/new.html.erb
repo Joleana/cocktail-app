@@ -1,7 +1,17 @@
 <h1>Add cocktail 🚀</h1>
+
+<div class="container">
+  <div class="row justify-content-center" >
+    <div class="col-8">
 <%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.association :ingredients %>
-  <%= f.association :doses %>
-  <%= f.submit %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :ingredients %>
+    <%= f.input :doses %>
+  </div>
+  <div class="form-actions">
+  <%= f.button :submit %>
 <% end %>
+</div>
+</div>
+</div>
